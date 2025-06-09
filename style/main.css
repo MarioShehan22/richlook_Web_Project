@@ -1,0 +1,164 @@
+body {
+  font-family: 'Inter',
+  Arial, sans-serif;
+}
+.navbar-brand img {
+  max-height: 40px;
+}
+.nav-icons img {
+  width: 24px;
+}
+.nav-link {
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2f4cbc !important;
+}
+.search-box {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.search-box input {
+  width: 180px;
+}
+.category-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.category-box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.category-box .overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(0,0,0,0.5); color: #fff; padding: 20px;
+  text-align: center;
+}
+.btn.secondary {
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.brands-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.brand-logo {
+  height: 50px;
+  object-fit: contain;
+}
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 0 0 0;
+}
+.footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  background: #111;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+.product-card img {
+  border-radius: 10px;
+}
+.payment-logos-below img {
+  height: 24px;
+  margin-right: 8px;
+}
+.store-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.store {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+.product-image-container {
+  width: 100%;
+  height: 250px; /* Fixed height for all product images */
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the image covers the container while maintaining aspect ratio */
+  object-position: center; /* Centers the image within the container */
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05); /* Optional hover effect */
+}
+
+.product-card {
+  padding: 15px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.payment-logos-below {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.payment-logo {
+  height: 20px;
+  width: auto;
+}
+
+@media (max-width: 576px) {
+  .product-image-container {
+    height: 180px;
+  }
+}
+@media (max-width: 991px) {
+  .store-locations { flex-direction: column; }
+}
+/* Responsive tweaks */
+@media (max-width: 767px) {
+  .brands-grid {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .category-box img {
+    height: 120px;
+  }
+  .product-image-container {
+    height: 200px;
+  }
+}

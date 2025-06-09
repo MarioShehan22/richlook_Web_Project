@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Women's Collection</title>
+ <link rel="stylesheet" href="style/productsidebar.css" />
+ <!-- Link to external JavaScript -->
+ <script src="js/productsidebar.js" defer></script>
+ <!-- Bootstrap CSS -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Font Awesome -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+ <div class="container">
+  <a class="navbar-brand" href="index.html">
+   <img src="assets/header.png" alt="Rich Look Logo">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+   <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+     <a class="nav-link" href="#">Womens</a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Mens</a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Baby & Kids</a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Bags & Shoes</a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Home & Life Style</a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Gift & Souvenirs</a>
+    </li>
+   </ul>
+
+   <div class="d-flex align-items-center gap-3 nav-icons">
+    <a href="#"><img src="assets/phone.png" alt="Phone"></a>
+    <a href="#"><img src="assets/user.png" alt="Login"></a>
+    <a href="#"><img src="assets/heart.png" alt="Heart"></a>
+    <a href="#"><img src="assets/cart.png" alt="Cart"></a>
+   </div>
+  </div>
+ </div>
+</nav>
+<!-- Header -->
+<div class="page-header">
+ <div class="container">
+  <div class="row align-items-center">
+   <div class="col-md-6">
+    <h1 class="h2 mb-0 fw-bold">Women's Collection</h1>
+   </div>
+   <div class="col-md-6">
+    <div class="d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+     <span class="me-2">Sort By:</span>
+     <select class="form-select form-select-sm" style="width: auto;">
+      <option>Latest</option>
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+      <option>Most Popular</option>
+     </select>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="container">
+ <!-- Category Pills -->
+ <div class="category-pills text-center mb-4">
+  <button class="btn btn-outline-primary btn-sm">Casual Wear</button>
+  <button class="btn btn-outline-primary btn-sm">Office Wear</button>
+  <button class="btn btn-outline-primary btn-sm">Ethnic Wear</button>
+  <button class="btn btn-outline-primary btn-sm">Evening Wear</button>
+  <button class="btn btn-outline-primary btn-sm">Beauty</button>
+ </div>
+
+ <div class="row">
+  <!-- Mobile Filter Button -->
+  <div class="col-12 d-lg-none mb-3">
+   <button class="btn btn-outline-secondary w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#filterOffcanvas">
+    <i class="fas fa-filter me-2"></i>Filters
+   </button>
+  </div>
+
+  <!-- Sidebar Filters (Desktop) - FIXED VERSION -->
+  <div class="col-lg-3 d-none d-lg-block">
+   <div class="sidebar h-100">
+    <!-- Price Filter -->
+    <div class="filter-section mb-4">
+     <h6 class="filter-title mb-3">
+      <i class="fas fa-tag me-2"></i>Price Range
+     </h6>
+     <div class="price-range">
+      <input type="range" class="form-range mb-3" min="0" max="15000" value="12990">
+      <div class="row g-2 align-items-center">
+       <div class="col-5">
+        <div class="input-group input-group-sm">
+         <span class="input-group-text">Rs</span>
+         <input type="number" class="form-control" value="0" min="0">
+        </div>
+       </div>
+       <div class="col-2 text-center">
+        <small>to</small>
+       </div>
+       <div class="col-5">
+        <div class="input-group input-group-sm">
+         <span class="input-group-text">Rs</span>
+         <input type="number" class="form-control" value="12990" max="15000">
+        </div>
+       </div>
+      </div>
+      <button class="btn btn-primary w-100 mt-3 btn-sm">Apply</button>
+     </div>
+    </div>
+
+    <!-- Color Filter -->
+    <div class="filter-section mb-4">
+     <h6 class="filter-title mb-3">
+      <i class="fas fa-palette me-2"></i>Color
+     </h6>
+     <div class="d-flex flex-wrap gap-2 mb-3">
+      <div class="color-swatch border border-2 rounded-circle"
+           style="width: 30px; height: 30px; background-color: #ffffff; border-color: #ddd !important;"
+           title="White"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #f4f4a1;"
+           title="Light Yellow"></div>
+      <div class="color-swatch rounded-circle border border-3 border-primary"
+           style="width: 30px; height: 30px; background-color: #000000;"
+           title="Black"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #ffc0cb;"
+           title="Pink"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #e6e6fa;"
+           title="Lavender"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #2c3e50;"
+           title="Dark Blue"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #ecf0f1;"
+           title="Light Gray"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #bdc3c7;"
+           title="Gray"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #d5dbdb;"
+           title="Light Gray 2"></div>
+      <div class="color-swatch rounded-circle"
+           style="width: 30px; height: 30px; background-color: #f8f9fa;"
+           title="Off White"></div>
+     </div>
+     <a href="#" class="btn btn-link btn-sm p-0 text-decoration-none">
+      <i class="fas fa-chevron-down me-1"></i>Show All
+     </a>
+    </div>
+
+    <!-- Size Filter -->
+    <div class="filter-section mb-4">
+     <h6 class="filter-title mb-3">
+      <i class="fas fa-ruler me-2"></i>Size
+     </h6>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="sizeXL">
+      <label class="form-check-label small" for="sizeXL">XL (31)</label>
+     </div>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="sizeL">
+      <label class="form-check-label small" for="sizeL">L (27)</label>
+     </div>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="sizeM">
+      <label class="form-check-label small" for="sizeM">M (27)</label>
+     </div>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="sizeS">
+      <label class="form-check-label small" for="sizeS">S (9)</label>
+     </div>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="sizeXXL">
+      <label class="form-check-label small" for="sizeXXL">XXL (1)</label>
+     </div>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="sizeFree">
+      <label class="form-check-label small" for="sizeFree">FREE SIZE (3)</label>
+     </div>
+    </div>
+
+    <!-- Brand Filter -->
+    <div class="filter-section mb-4">
+     <h6 class="filter-title mb-3">
+      <i class="fas fa-star me-2"></i>Brand
+     </h6>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="brandRich">
+      <label class="form-check-label small text-wrap" for="brandRich">RICH LOOK WOMEN'S (15)</label>
+     </div>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="brandAmara">
+      <label class="form-check-label small" for="brandAmara">Amara Collection (5)</label>
+     </div>
+    </div>
+
+    <!-- Stock Filter -->
+    <div class="filter-section mb-4">
+     <h6 class="filter-title mb-3">
+      <i class="fas fa-box me-2"></i>Availability
+     </h6>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="inStock">
+      <label class="form-check-label small" for="inStock">In Stock (158)</label>
+     </div>
+     <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="outStock">
+      <label class="form-check-label small" for="outStock">Out Of Stock (180)</label>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="col-lg-9">
+   <div class="row g-4">
+    <!-- Product 1 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="productDetails.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/9c0a288b-1371-4c78-7e0b-f66715b1d2f5.jpg" alt="Off Shoulder Dress" class="product-image">
+       <div class="product-info">
+        <div class="product-name">Off Shoulder Dress</div>
+        <div class="product-price">Rs. 2,390</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 860 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="product/mix-of-floral-dress.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/45cb1fc7-71bc-48fe-0267-429457d38658.jpg" alt="Mix of Floral Dress" class="product-image">
+       <div class="product-info">
+        <div class="product-name">Mix of Floral Dress</div>
+        <div class="product-price">Rs. 3,300</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 1,130 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="product/printed-satin-silk-saree.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/9ab85e8d-941d-452e-acd8-080bcb08423f.jpg" alt="Printed Satin Silk Saree" class="product-image">
+       <div class="product-info">
+        <div class="product-name">Printed Satin Silk Saree</div>
+        <div class="product-price">Rs. 8,450</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 2,860 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="product/woven-handbag-9.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/385c7a00-6130-46eb-ed08-a263e935d7b7.jpg" alt="Woven Handbag" class="product-image">
+       <div class="product-info">
+        <div class="product-name">Woven Handbag - 9</div>
+        <div class="product-price">Rs. 3,290</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 1,150 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="product/v-neck-ruffled-broderie-top.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/bdbebc43-92ed-4197-1a5b-4f08ae7b52b4.jpg" alt="V Neck Ruffled Broderie Top" class="product-image">
+       <div class="product-info">
+        <div class="product-name">V Neck Ruffled Broderie Top</div>
+        <div class="product-price">Rs. 2,290</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 1,100 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="product/formal-v-neck-wrap-top.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/dbed182b-13a0-417b-b05f-e388ab1321f0.jpg" alt="Formal V-Neck Wrap Top" class="product-image">
+       <div class="product-info">
+        <div class="product-name">Formal V-Neck Wrap Top</div>
+        <div class="product-price">Rs. 3,600</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 1,300 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="product/collared-maxi-dress.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/6274c9f6-067e-42e0-2390-953fbedf863c.jpg" alt="Collared Maxi Dress" class="product-image">
+       <div class="product-info">
+        <div class="product-name">Collared Maxi Dress</div>
+        <div class="product-price">Rs. 3,990</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 1,400 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="col-6 col-md-4 col-xl-3">
+     <a href="product/dotted-lace-crochet-ruffle.html" class="product-link">
+      <div class="product-card">
+       <img src="https://storage.googleapis.com/a1aa/image/50e9b0bd-3a9e-459f-1876-3d4e509e11b8.jpg" alt="Dotted Lace Crochet Ruffle" class="product-image">
+       <div class="product-info">
+        <div class="product-name">Dotted Lace Crochet Ruffle...</div>
+        <div class="product-price">Rs. 3,790</div>
+        <div class="installment-info">
+         or pay 3 x Rs. 990 with <span class="payment-brand">SOLO</span>
+        </div>
+       </div>
+      </div>
+     </a>
+    </div>
+   </div>
+
+   <!-- Load More Button -->
+   <div class="text-center mt-5">
+    <button class="btn btn-outline-primary btn-lg px-4">Load More Products</button>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- Mobile Filter Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas">
+ <div class="offcanvas-header">
+  <h5 class="offcanvas-title">
+   <i class="fas fa-filter me-2"></i>Filters
+  </h5>
+  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+ </div>
+ <div class="offcanvas-body p-0">
+  <div class="sidebar">
+   <!-- Same filter content as desktop sidebar -->
+   <div class="filter-section">
+    <h6 class="filter-title">
+     <i class="fas fa-tag me-2"></i>Price Range
+    </h6>
+    <div class="price-range">
+     <input type="range" class="range-input" min="0" max="15000" value="12990">
+     <div class="price-inputs">
+      <div class="d-flex align-items-center">
+       <span class="me-2">Rs</span>
+       <input type="number" class="price-input" value="0" min="0">
+      </div>
+      <span class="align-self-center">to</span>
+      <div class="d-flex align-items-center">
+       <span class="me-2">Rs</span>
+       <input type="number" class="price-input" value="12990" max="15000">
+      </div>
+     </div>
+    </div>
+    <button class="btn apply-btn w-100 mt-3">Apply</button>
+   </div>
+
+   <div class="filter-section">
+    <h6 class="filter-title">
+     <i class="fas fa-palette me-2"></i>Color
+    </h6>
+    <div class="color-options">
+     <div class="color-swatch" style="background-color: #ffffff; border: 2px solid #ddd;"></div>
+     <div class="color-swatch" style="background-color: #f4f4a1;"></div>
+     <div class="color-swatch selected" style="background-color: #000000;"></div>
+     <div class="color-swatch" style="background-color: #ffc0cb;"></div>
+     <div class="color-swatch" style="background-color: #e6e6fa;"></div>
+     <div class="color-swatch" style="background-color: #2c3e50;"></div>
+     <div class="color-swatch" style="background-color: #ecf0f1;"></div>
+     <div class="color-swatch" style="background-color: #bdc3c7;"></div>
+     <div class="color-swatch" style="background-color: #d5dbdb;"></div>
+     <div class="color-swatch" style="background-color: #f8f9fa;"></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+ <div class="container footer-container row mx-auto">
+  <div class="footer-col col-12 col-md-3 mb-4">
+   <h3>Reach Us</h3>
+   <p><strong>Rich Look International (PVT) Ltd</strong></p>
+   <p>312, <br> Galle Road, Kalutara South,<br>Kalutara</p>
+   <p>📞 0703157575</p>
+   <p>📧 hello@richlook.lk</p>
+  </div>
+  <div class="footer-col col-12 col-md-3 mb-4">
+   <h3>Products</h3>
+   <ul class="list-unstyled">
+    <li><a href="#">Latest Products</a></li>
+    <li><a href="#">Women's Collection</a></li>
+    <li><a href="#">Men's Collection</a></li>
+   </ul>
+  </div>
+  <div class="footer-col col-12 col-md-3 mb-4">
+   <h3>About Us</h3>
+   <ul class="list-unstyled">
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Return, Exchange & Refund Policy</a></li>
+    <li><a href="#">Fine Print</a></li>
+    <li><a href="#">Promotions</a></li>
+   </ul>
+  </div>
+  <div class="footer-col col-12 col-md-3 mb-4">
+   <h3>Fine Print</h3>
+   <ul class="list-unstyled">
+    <li><a href="#">Promotions</a></li>
+   </ul>
+  </div>
+ </div>
+ <div class="footer-bottom">
+  <p>Copyright © 2025 Rich Look International (PVT) Ltd. All rights reserved.</p>
+ </div>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

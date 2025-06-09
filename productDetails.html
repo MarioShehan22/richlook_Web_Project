@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxed Fit Shirt - Rich Look</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style/productDetails.css" />
+    <!-- Link to external JavaScript -->
+    <script src="js/productDetails.js" defer></script>
+</head>
+
+<body>
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/header.png" alt="Rich Look Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Womens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Baby & Kids</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bags & Shoes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home & Life Style</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gift & Souvenirs</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 nav-icons">
+                <a href="#"><img src="assets/phone.png" alt="Phone"></a>
+                <a href="#"><img src="assets/user.png" alt="Login"></a>
+                <a href="#"><img src="assets/heart.png" alt="Heart"></a>
+                <a href="#"><img src="assets/cart.png" alt="Cart"></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="container py-4">
+    <div class="row g-4">
+        <!-- Product Images -->
+        <div class="col-lg-6">
+            <div class="row">
+                <!-- Thumbnails -->
+                <div class="col-2 col-lg-2">
+                    <div class="d-flex flex-column gap-2">
+                        <img src="assets/img1.jpg" alt="Thumb 1" class="product-thumbnail" onclick="changeMainImage(this.src)">
+                        <img src="assets/img2.jpg" alt="Thumb 2" class="product-thumbnail" onclick="changeMainImage(this.src)">
+                        <img src="assets/img3.jpg" alt="Thumb 3" class="product-thumbnail" onclick="changeMainImage(this.src)">
+                        <img src="assets/img4.jpg" alt="Thumb 4" class="product-thumbnail" onclick="changeMainImage(this.src)">
+                        <img src="assets/img5.jpg" alt="Thumb 5" class="product-thumbnail" onclick="changeMainImage(this.src)">
+                    </div>
+                </div>
+
+                <!-- Main Image -->
+                <div class="col-10 col-lg-10">
+                    <img src="assets/img1.jpg" alt="Relaxed Fit Shirt" id="mainImage" class="main-product-image w-100 rounded">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-lg-6">
+            <!-- Breadcrumb -->
+            <nav aria-label="breadcrumb" class="mb-3">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Womens</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Casual wear</a></li>
+                    <li class="breadcrumb-item active">Tops & T-Shirts</li>
+                </ol>
+            </nav>
+
+            <!-- Product Title -->
+            <h1 class="h2 fw-bold mb-2">Relaxed fit Shirt</h1>
+            <p class="text-muted small mb-3">
+                SKU 300092413 by <a href="#" class="text-decoration-none" style="color: #2f4cbc;">RICH LOOK - WOMEN'S</a>
+            </p>
+
+            <!-- Brand Image -->
+            <div class="mb-3">
+                <img src="assets/richlook brand.png" alt="Rich Look Brand" class="brand-image">
+            </div>
+
+            <!-- Price -->
+            <div class="price mb-2">Rs. 2,390</div>
+
+            <div class="mb-2 text-success fs-6">Availability : In stock</div>
+            <div class="small text-muted mb-2">
+                or pay 3 x Rs.797 with <img src="assets/mintpay.png" alt="Mint Pay" class="payment-image ms-1">
+            </div>
+            <div class="small text-muted mb-4">
+                or pay 3 x Rs.797 with
+                <img src="assets/koko.png" alt="Koko" class="payment-image ms-1">
+                <img src="assets/info.png" alt="Info" class="info-icon ms-1">
+            </div>
+
+            <!-- Colors -->
+            <div class="mb-4">
+                <h6 class="fw-bold mb-2">COLORS</h6>
+                <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn option-btn">GREY</button>
+                    <button type="button" class="btn option-btn">BLUE</button>
+                </div>
+            </div>
+
+            <!-- Sizes -->
+            <div class="mb-4">
+                <h6 class="fw-bold mb-2">SIZE</h6>
+                <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn option-btn">S</button>
+                    <button type="button" class="btn option-btn">L</button>
+                    <button type="button" class="btn option-btn">XL</button>
+                </div>
+            </div>
+
+            <!-- Cart Controls -->
+            <div class="d-flex gap-2 mb-4 flex-wrap">
+                <div class="input-group" style="width: 120px;">
+                    <span class="input-group-text">Qty</span>
+                    <input type="number" class="form-control qty-input" value="1" min="1">
+                </div>
+                <button class="btn btn-primary add-to-cart-btn flex-fill">ADD TO CART</button>
+                <button class="btn wishlist-btn" style="width: 50px;">
+                    <img src="assets/wish.png" alt="Wishlist">
+                </button>
+            </div>
+
+            <!-- Delivery Info -->
+            <div class="mb-4">
+                <h6 class="fw-bold mb-2">DELIVERY</h6>
+                <p class="small mb-3">
+                    Get the estimated delivery fee
+                    <a href="#" class="text-decoration-underline" style="color: #2f4cbc;">Select city</a>
+                </p>
+
+                <div class="d-flex flex-column flex-md-row gap-3 delivery-info small">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="assets/clock.png" alt="Processing" class="delivery-icon">
+                        <span>Processing Time: 5 days</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="assets/hand.png" alt="Store Pickup" class="delivery-icon">
+                        <span>Store Pickup: Not available</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="assets/lorry.png" alt="Delivery" class="delivery-icon">
+                        <span>Islandwide Delivery: Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-4">
+                <h6 class="fw-bold mb-3">DESCRIPTION</h6>
+
+                <div class="mb-3">
+                    <strong>Female Model</strong>
+                    <ul class="custom-bullets mt-2">
+                        <li>Height: 5'4"</li>
+                        <li>Bust: 34"</li>
+                        <li>Waist: 27"</li>
+                        <li>Wearing Size: S</li>
+                    </ul>
+                </div>
+
+                <p class="small text-muted">
+                    <strong>Note:</strong> Please bear in mind that the colour may slightly differ due to lighting conditions or the display used to view the item.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer py-5 mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Reach Us -->
+            <div class="col-md-6 col-lg-3">
+                <h5>Reach Us</h5>
+                <p class="mb-1"><strong>Rich Look International (PVT) Ltd</strong></p>
+                <p class="mb-1">312, Galle Road,<br>Kalutara South, Kalutara</p>
+                <p class="mb-1"><i class="fas fa-phone me-2"></i>0703157575</p>
+                <p><i class="fas fa-envelope me-2"></i>hello@richlook.lk</p>
+            </div>
+
+            <!-- Products -->
+            <div class="col-md-6 col-lg-3">
+                <h5>Products</h5>
+                <ul>
+                    <li><a href="#">Latest Products</a></li>
+                    <li><a href="#">Women's Collection</a></li>
+                    <li><a href="#">Men's Collection</a></li>
+                </ul>
+            </div>
+
+            <!-- About Us -->
+            <div class="col-md-6 col-lg-3">
+                <h5>About Us</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Return, Exchange & Refund Policy</a></li>
+                    <li><a href="#">Fine Print</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+
+            <!-- Fine Print -->
+            <div class="col-md-6 col-lg-3">
+                <h5>Fine Print</h5>
+                <ul>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-1">Copyright © 2025 Rich Look International (PVT) Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

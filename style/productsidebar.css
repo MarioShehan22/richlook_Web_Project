@@ -1,0 +1,302 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+}
+.navbar-brand img {
+    max-height: 40px;
+}
+.nav-icons img {
+    width: 24px;
+}
+.nav-link {
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2f4cbc !important;
+}
+/* Header Styles */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Category Pills */
+.category-pills .btn {
+    border-radius: 25px;
+    margin: 0.2rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.category-pills .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    position: sticky;
+    top: 20px;
+    /*max-height: calc(100vh - 40px);*/
+    /*overflow-y: auto;*/
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+}
+
+.filter-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.filter-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Custom Checkbox */
+.form-check-input:checked {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #495057;
+    cursor: pointer;
+}
+
+/* Price Range Slider */
+.price-range {
+    padding: 1rem 0;
+}
+
+.range-slider {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.range-input {
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    appearance: none;
+    outline: none;
+}
+
+.range-input::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.price-inputs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.price-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Color Swatches */
+.color-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.color-swatch {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.color-swatch.selected {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+/* Apply Button */
+.apply-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Product Grid */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-name {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.product-price {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.installment-info {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.payment-brand {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Product Link Styles */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.product-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mobile Offcanvas */
+.offcanvas-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+.footer {
+    margin-top: 50px;
+    background: #222;
+    color: #fff;
+    padding: 40px 0 0 0;
+}
+.footer a {
+    color: #bbb;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    background: #111;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .product-image {
+        height: 200px;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+}
+
+/* Show All Button */
+.show-all-btn {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.show-all-btn:hover {
+    color: var(--primary-color);
+}
