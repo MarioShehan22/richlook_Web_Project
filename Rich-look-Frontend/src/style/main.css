@@ -1,0 +1,138 @@
+/* Import Design System and Modern Components */
+@import url('./design-system.css');
+@import url('./modern-components.css');
+@import url('./consistency-guide.css');
+
+/* Root spacing + helpers */
+:root {
+  --rl-radius: 16px;
+  --rl-shadow: 0 6px 20px rgba(0,0,0,.08);
+  --cat-gap: 16px;
+  --cat-tile-h: 300px;     /* right tiles height */
+}
+
+/* HERO */
+.hero { position: relative; }
+.hero-img { height: min(70vh, 720px); object-fit: cover; }
+.hero-gradient { position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,.55) 100%); }
+.carousel-caption { bottom: 18%; left: 5%; z-index: 2; color: #fff; }
+.text-shadow { text-shadow: 0 2px 8px rgba(0,0,0,.35); }
+.text-shadow-soft { text-shadow: 0 1px 4px rgba(0,0,0,.25); }
+.carousel-item:hover .hero-img { transform: scale(1.03); transition: transform .3s ease; }
+
+/* CATEGORY BOX */
+/* --- GRID LAYOUT --- */
+.cat-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 2fr 1.25fr;         /* left bigger than right */
+  grid-template-rows: auto auto;
+}
+
+.cat-grid{
+  display:grid;
+  gap: var(--cat-gap);
+  grid-template-columns: 2fr 1.25fr;
+  grid-template-rows: auto auto;  /* 2 rows on the right */
+}
+.cat-women{ grid-column:1; grid-row:1 / span 2; min-height: calc(2 * var(--cat-tile-h) + var(--cat-gap)); }
+.cat-men{   grid-column:2; grid-row:1;            min-height: var(--cat-tile-h); }
+.cat-subgrid{
+  grid-column:2; grid-row:2;
+  display:grid; gap: var(--cat-gap); grid-template-columns:1fr 1fr;
+}
+.cat-subgrid .category-box{ min-height: var(--cat-tile-h); }
+
+/* Category card look */
+.category-box{ position:relative; overflow:hidden; border-radius:var(--rl-radius); box-shadow:0 4px 8px rgba(0,0,0,.07); display:block; height:100%; }
+.category-box img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .35s ease; }
+.category-box:hover img{ transform: scale(1.04); }
+
+.category-box .overlay{
+  position:absolute; inset:auto 0 0 0; padding:18px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,.65) 90%);
+  color:#fff; transition: transform .2s ease;
+}
+.category-box:hover .overlay{ transform: translateY(-6px); }
+
+/* Responsive */
+@media (max-width: 991px){
+  .cat-grid{ grid-template-columns:1fr; }
+  .cat-women, .cat-men, .cat-subgrid{ grid-column:1; grid-row:auto; }
+  .cat-women{ min-height: calc(2 * var(--cat-tile-h) + var(--cat-gap)); }
+}
+
+/* PROMO */
+.promo-banner { background-color: #f3f5f9; border: 1px solid #eef1f6; }
+
+
+/* PRODUCT CARD */
+.product-card { background:#fff; padding: 14px; border-radius: var(--rl-radius); box-shadow: 0 0 0 1px rgba(0,0,0,.05), var(--rl-shadow); transition: transform .25s ease, box-shadow .25s ease; height: 100%; }
+.product-card:hover { transform: translateY(-4px); box-shadow: 0 4px 30px rgba(0,0,0,.12); }
+.product-image-container { overflow:hidden; border-radius: 10px; }
+.product-image-container img { width:100%; height:100%; object-fit: cover; display:block; }
+
+
+/* Payment logos — fixed bug: previously 3×2px */
+.payment-logos-below { display:flex; justify-content:center; gap:.75rem; margin-top:6px; align-items:center; }
+.payment-logo { width: 72px; height: 24px; object-fit: contain; filter: grayscale(10%); opacity:.9; transition: transform .2s ease, opacity .2s ease; }
+.payment-logo:hover { transform: translateY(-1px) scale(1.03); opacity:1; }
+
+/* Section header */
+.new-arrivals .na-header .na-viewall {
+  text-decoration: none;
+}
+
+/* Make every carousel slide the same height */
+.react-multi-carousel-item { display: flex; }
+.na-card {
+  display: flex; flex-direction: column;
+  height: 100%;
+  background: #fff; border: 1px solid #eee; border-radius: 14px;
+  overflow: hidden; transition: transform .18s ease, box-shadow .18s ease;
+}
+.na-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,.08); }
+
+/* Fixed image area (4:5) so all thumbs match */
+.na-thumb { position: relative; aspect-ratio: 4 / 5; background:#f7f7f7; overflow:hidden; }
+.na-thumb img { display:block; width:100%; height:100%; object-fit:cover; transition: transform .35s ease; }
+.na-card:hover .na-thumb img { transform: scale(1.04); }
+
+/* Fallback if the browser doesn’t support aspect-ratio */
+@supports not (aspect-ratio: 1 / 1) {
+  .na-thumb { position: relative; }
+  .na-thumb::before { content:""; display:block; padding-top:125%; }
+  .na-thumb > a, .na-thumb img { position:absolute; inset:0; }
+}
+
+/* Body fills remaining space; button stays at bottom */
+.na-body { display:flex; flex-direction:column; padding:12px 14px 16px; }
+.na-title {
+  color:#111827; font-weight:600; line-height:1.25;
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  min-height: 2.6em; /* reserve space for exactly 2 lines */
+}
+.na-price { display:flex; gap:8px; align-items:center; margin-top:4px; }
+.na-price-now { font-weight:700; }
+.na-price-old { color:#6b7280; text-decoration:line-through; font-size:.9rem; }
+.na-cta { margin-top:auto; border-radius:10px; }
+
+/* Badges (unchanged) */
+.na-badge { position:absolute; top:10px; left:10px; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:600; color:#fff; }
+.na-badge-new { background:#0ea5e9; }
+.na-badge-sale { left:auto; right:10px; background:#ef4444; }
+
+/* Typography tweaks */
+.installment { line-height: 1.2; }
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .carousel-caption { bottom: 16%; }
+}
+@media (max-width: 768px) {
+  .hero-img { height: 46vh; }
+  .carousel-caption { bottom: 12%; }
+  .carousel-caption h2 { font-size: 1.25rem; }
+  .carousel-caption p { font-size: .95rem; }
+}

@@ -1,0 +1,106 @@
+/* ===================================
+   SIGNUP PAGE STYLES - DESIGN SYSTEM COMPATIBLE
+   =================================== */
+
+/* Background styling for signup page */
+.signup-page {
+    background: var(--rl-neutral-50);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--rl-space-4);
+}
+
+/* Enhanced card styling */
+.signup-card {
+    background: white;
+    border-radius: var(--rl-radius-lg);
+    box-shadow: var(--rl-shadow-lg);
+    border: 1px solid var(--rl-neutral-200);
+    transition: box-shadow var(--rl-transition-base);
+}
+
+.signup-card:hover {
+    box-shadow: var(--rl-shadow-xl);
+}
+
+/* Form spacing improvements */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rl-space-4);
+}
+
+/* Social buttons enhancement */
+.social-button {
+    transition: all var(--rl-transition-base);
+    border-radius: var(--rl-radius-md);
+    font-weight: var(--rl-font-medium);
+}
+
+.social-button:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--rl-shadow-md);
+}
+
+/* Divider styling */
+.divider {
+    position: relative;
+    text-align: center;
+    margin: var(--rl-space-6) 0;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--rl-neutral-200);
+}
+
+.divider-text {
+    background: white;
+    padding: 0 var(--rl-space-4);
+    color: var(--rl-neutral-600);
+    font-size: var(--rl-text-sm);
+    position: relative;
+    z-index: 1;
+}
+
+/* Link styling */
+.signup-link {
+    color: var(--rl-primary-600);
+    text-decoration: none;
+    font-weight: var(--rl-font-semibold);
+    transition: color var(--rl-transition-base);
+}
+
+.signup-link:hover {
+    color: var(--rl-primary-700);
+    text-decoration: underline;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .signup-page {
+        padding: var(--rl-space-2);
+    }
+    
+    .signup-card {
+        margin: var(--rl-space-2);
+    }
+}
+
+/* Loading state improvements */
+.signup-loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Focus improvements for accessibility */
+.signup-card:focus-within {
+    box-shadow: 0 0 0 3px var(--rl-primary-100);
+}

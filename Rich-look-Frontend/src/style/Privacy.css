@@ -1,0 +1,74 @@
+:root{
+    --pp-bg: #f7f9fc;
+    --pp-card: #ffffff;
+    --pp-text: #111827;
+    --pp-muted: #6b7280;
+    --pp-border: #e5e7eb;
+    --pp-primary: #0040ff; /* Bootstrap success tone (matches your theme) */
+    --pp-shadow: 0 10px 30px rgba(0,0,0,.06);
+    --pp-radius: 16px;
+}
+
+.privacy-page{
+    color: var(--pp-text);
+    background: var(--pp-bg);
+}
+
+/* Hero */
+.privacy-hero{
+    margin: 1.5rem auto 1.25rem;
+    border-radius: var(--pp-radius);
+    min-height: 200px;
+    background:
+            linear-gradient(115deg, rgb(79, 79, 227), rgba(55, 137, 140, 0.06));
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--pp-shadow);
+}
+.privacy-hero .hero-content{
+    padding: clamp(1.25rem, 4vw, 2.25rem);
+    max-width: 840px;
+}
+
+/* Cards / Sections */
+.policy-section{
+    border-radius: var(--pp-radius);
+    background: var(--pp-card);
+    box-shadow: var(--pp-shadow);
+    line-height: 1.7;
+    font-size: 1.02rem;
+}
+
+/* Sidebar nav */
+.policy-nav{
+    position: sticky;
+    top: 20px;
+    border-radius: var(--pp-radius);
+}
+.policy-nav .card-body{
+    padding: 1rem 1.25rem;
+}
+.policy-nav a{
+    display: block;
+    padding: .25rem 0;
+    color: var(--pp-text);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+}
+.policy-nav a:hover{
+    color: var(--pp-primary);
+    border-left-color: var(--pp-primary);
+}
+
+/* Lists & links */
+.policy-section a{
+    color: var(--pp-primary);
+    text-decoration: underline;
+}
+.policy-section a:hover{
+    text-decoration: none;
+}
+
+@media (max-width: 991.98px){
+    .policy-nav{ display: none; }
+}

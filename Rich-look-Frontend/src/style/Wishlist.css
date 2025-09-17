@@ -1,0 +1,114 @@
+/* Container title */
+.wl-title {
+    color: #1f2937;
+    font-weight: 700;
+}
+
+/* Empty state */
+.wl-empty {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+}
+.wl-empty-art {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background:
+            radial-gradient(transparent 58%, rgba(0,0,0,.06) 60%),
+            conic-gradient(from 0deg, #e8f5e9, #e0f2fe, #fff7ed, #fce7f3, #e8f5e9);
+    box-shadow: inset 0 0 0 8px #fff;
+}
+
+/* Grid */
+.wl-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+@media (min-width: 576px) { .wl-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 992px) { .wl-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1200px){ .wl-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* Card */
+.wl-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform .18s ease, box-shadow .18s ease;
+    border: 1px solid #eef2f7;
+}
+.wl-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+/* Media (4:5 aspect) */
+.wl-media {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    background: #f8fafc;
+}
+.wl-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.wl-media-link {
+    display: block;
+    height: 100%;
+}
+
+/* Hover actions (fade-in at bottom) */
+.wl-actions {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    display: grid;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all .18s ease;
+}
+.wl-card:hover .wl-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Body */
+.wl-body {
+    padding: 12px 14px 16px;
+}
+.wl-name {
+    font-weight: 600;
+    color: #111827;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.25rem;
+    min-height: 2.5rem; /* reserve height for 2 lines */
+}
+.wl-name:hover { color: #0d6efd; }
+.wl-price {
+    margin-top: 6px;
+    font-weight: 700;
+    color: #e11d48; /* rose-600 */
+}
+.wl-meta {
+    margin-top: 4px;
+    font-size: .85rem;
+}
+
+/* Buttons inside actions */
+.wl-actions .btn {
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}

@@ -1,0 +1,50 @@
+:root{
+    --ck-text:#111827; --ck-muted:#6b7280; --ck-border:#e5e7eb;
+    --ck-radius:12px; --ck-primary:#198754; --ck-primary-600:#157347;
+    --ck-ring:rgba(25,135,84,.35);
+}
+
+.checkout-wrapper{ color:var(--ck-text); }
+.checkout-heading{ font-weight:800; }
+
+/* Cards */
+.checkout-card,.summary-card{ border-radius:var(--ck-radius); }
+
+/* Step header */
+.step-header{ display:flex; align-items:center; gap:.75rem; }
+.step-badge{
+    width:32px;height:32px;border-radius:50%;
+    display:grid;place-items:center;background:var(--ck-primary);color:#fff;font-weight:700;
+}
+.step-title{ font-weight:700; }
+
+/* Forms */
+.form-control{ border-radius:8px; border:1px solid var(--ck-border); }
+.form-control:focus{ border-color:var(--ck-primary); box-shadow:0 0 0 4px var(--ck-ring); }
+
+/* Confirm box */
+#confirm-box{ border:1px dashed var(--ck-border); border-radius:10px; padding:.9rem 1rem; background:#f9fafb; }
+.edit-btn{ background:transparent; border:1px solid var(--ck-primary); color:var(--ck-primary); border-radius:8px; padding:.4rem .75rem; font-weight:600; }
+.edit-btn:hover{ background:var(--ck-primary); color:#fff; }
+
+/* Payment reveal */
+#payment-box{ animation:ckFade .25s ease-out; }
+@keyframes ckFade{ from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }
+
+/* Summary list */
+.summary-items{ display:grid; gap:.75rem; }
+.summary-item{ display:grid; grid-template-columns:56px 1fr auto; gap:.75rem; align-items:center; }
+.summary-item img,.summary-thumb-fallback{
+    width:56px;height:56px;border-radius:8px;object-fit:cover;background:#f3f4f6;border:1px solid var(--ck-border);
+}
+.summary-item-title{ font-weight:600; line-height:1.25; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+/* Totals */
+.summary-line,.summary-total{ display:flex; justify-content:space-between; align-items:center; padding:.35rem 0; }
+.summary-line + .summary-line{ border-top:1px dashed var(--ck-border); }
+.summary-total{ margin-top:.5rem; padding-top:.75rem; border-top:2px solid var(--ck-border); font-weight:800; }
+
+/* Buttons */
+.btn{ border-radius:10px; font-weight:600; }
+.btn-success{ background:var(--ck-primary); border-color:var(--ck-primary); }
+.btn-success:hover{ background:var(--ck-primary-600); border-color:var(--ck-primary-600); }

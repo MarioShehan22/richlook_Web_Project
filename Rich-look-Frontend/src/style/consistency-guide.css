@@ -1,0 +1,344 @@
+/* ===================================
+   CONSISTENCY GUIDE & ADDITIONAL UTILITIES
+   =================================== */
+
+/* ===================================
+   GLOBAL STYLES FOR CONSISTENCY
+   =================================== */
+
+/* Ensure consistent font loading */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Global focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--rl-primary-500);
+  outline-offset: 2px;
+}
+
+/* Consistent link styles */
+a {
+  color: var(--rl-primary-600);
+  text-decoration: none;
+  transition: color var(--rl-transition-base);
+}
+
+a:hover {
+  color: var(--rl-primary-700);
+  text-decoration: underline;
+}
+
+/* Consistent button focus styles */
+button:focus,
+.rl-btn:focus {
+  outline: 2px solid var(--rl-primary-500);
+  outline-offset: 2px;
+}
+
+/* ===================================
+   ADDITIONAL UTILITY CLASSES
+   =================================== */
+
+/* Background Colors */
+.rl-bg-primary-50 { background-color: var(--rl-primary-50); }
+.rl-bg-primary-100 { background-color: var(--rl-primary-100); }
+.rl-bg-primary-500 { background-color: var(--rl-primary-500); }
+.rl-bg-primary-600 { background-color: var(--rl-primary-600); }
+.rl-bg-primary-700 { background-color: var(--rl-primary-700); }
+
+.rl-bg-neutral-50 { background-color: var(--rl-neutral-50); }
+.rl-bg-neutral-100 { background-color: var(--rl-neutral-100); }
+.rl-bg-neutral-200 { background-color: var(--rl-neutral-200); }
+.rl-bg-neutral-300 { background-color: var(--rl-neutral-300); }
+.rl-bg-neutral-400 { background-color: var(--rl-neutral-400); }
+.rl-bg-neutral-500 { background-color: var(--rl-neutral-500); }
+.rl-bg-neutral-600 { background-color: var(--rl-neutral-600); }
+.rl-bg-neutral-700 { background-color: var(--rl-neutral-700); }
+.rl-bg-neutral-800 { background-color: var(--rl-neutral-800); }
+.rl-bg-neutral-900 { background-color: var(--rl-neutral-900); }
+
+.rl-bg-success-50 { background-color: var(--rl-success-50); }
+.rl-bg-success-500 { background-color: var(--rl-success-500); }
+.rl-bg-warning-50 { background-color: var(--rl-warning-50); }
+.rl-bg-warning-500 { background-color: var(--rl-warning-500); }
+.rl-bg-error-50 { background-color: var(--rl-error-50); }
+.rl-bg-error-500 { background-color: var(--rl-error-500); }
+
+/* Text Colors */
+.rl-text-primary-50 { color: var(--rl-primary-50); }
+.rl-text-primary-100 { color: var(--rl-primary-100); }
+.rl-text-primary-500 { color: var(--rl-primary-500); }
+.rl-text-primary-600 { color: var(--rl-primary-600); }
+.rl-text-primary-700 { color: var(--rl-primary-700); }
+
+.rl-text-neutral-50 { color: var(--rl-neutral-50); }
+.rl-text-neutral-100 { color: var(--rl-neutral-100); }
+.rl-text-neutral-200 { color: var(--rl-neutral-200); }
+.rl-text-neutral-300 { color: var(--rl-neutral-300); }
+.rl-text-neutral-400 { color: var(--rl-neutral-400); }
+.rl-text-neutral-500 { color: var(--rl-neutral-500); }
+.rl-text-neutral-600 { color: var(--rl-neutral-600); }
+.rl-text-neutral-700 { color: var(--rl-neutral-700); }
+.rl-text-neutral-800 { color: var(--rl-neutral-800); }
+.rl-text-neutral-900 { color: var(--rl-neutral-900); }
+
+.rl-text-success-50 { color: var(--rl-success-50); }
+.rl-text-success-500 { color: var(--rl-success-500); }
+.rl-text-success-600 { color: var(--rl-success-600); }
+.rl-text-warning-50 { color: var(--rl-warning-50); }
+.rl-text-warning-500 { color: var(--rl-warning-500); }
+.rl-text-warning-600 { color: var(--rl-warning-600); }
+.rl-text-error-50 { color: var(--rl-error-50); }
+.rl-text-error-500 { color: var(--rl-error-500); }
+.rl-text-error-600 { color: var(--rl-error-600); }
+
+/* Border Colors */
+.rl-border-primary-200 { border-color: var(--rl-primary-200); }
+.rl-border-primary-300 { border-color: var(--rl-primary-300); }
+.rl-border-primary-500 { border-color: var(--rl-primary-500); }
+
+.rl-border-neutral-200 { border-color: var(--rl-neutral-200); }
+.rl-border-neutral-300 { border-color: var(--rl-neutral-300); }
+.rl-border-neutral-400 { border-color: var(--rl-neutral-400); }
+
+.rl-border-success-500 { border-color: var(--rl-success-500); }
+.rl-border-warning-500 { border-color: var(--rl-warning-500); }
+.rl-border-error-500 { border-color: var(--rl-error-500); }
+
+/* ===================================
+   LAYOUT UTILITIES
+   =================================== */
+
+/* Container utilities */
+.rl-container {
+  max-width: var(--rl-container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--rl-container-padding);
+}
+
+.rl-container-fluid {
+  width: 100%;
+  padding: 0 var(--rl-container-padding);
+}
+
+/* Flex utilities */
+.rl-flex { display: flex; }
+.rl-inline-flex { display: inline-flex; }
+.rl-flex-col { flex-direction: column; }
+.rl-flex-row { flex-direction: row; }
+.rl-flex-wrap { flex-wrap: wrap; }
+.rl-flex-nowrap { flex-wrap: nowrap; }
+.rl-items-center { align-items: center; }
+.rl-items-start { align-items: flex-start; }
+.rl-items-end { align-items: flex-end; }
+.rl-justify-center { justify-content: center; }
+.rl-justify-between { justify-content: space-between; }
+.rl-justify-start { justify-content: flex-start; }
+.rl-justify-end { justify-content: flex-end; }
+.rl-flex-1 { flex: 1; }
+.rl-flex-auto { flex: auto; }
+.rl-flex-none { flex: none; }
+
+/* Grid utilities */
+.rl-grid { display: grid; }
+.rl-grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.rl-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.rl-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.rl-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.rl-gap-1 { gap: var(--rl-space-1); }
+.rl-gap-2 { gap: var(--rl-space-2); }
+.rl-gap-3 { gap: var(--rl-space-3); }
+.rl-gap-4 { gap: var(--rl-space-4); }
+.rl-gap-6 { gap: var(--rl-space-6); }
+.rl-gap-8 { gap: var(--rl-space-8); }
+
+/* ===================================
+   INTERACTIVE STATES
+   =================================== */
+
+/* Hover states */
+.hover\:rl-bg-primary-100:hover { background-color: var(--rl-primary-100); }
+.hover\:rl-bg-neutral-100:hover { background-color: var(--rl-neutral-100); }
+.hover\:rl-text-primary-600:hover { color: var(--rl-primary-600); }
+.hover\:rl-text-white:hover { color: white; }
+.hover\:rl-shadow-md:hover { box-shadow: var(--rl-shadow-md); }
+.hover\:rl-shadow-lg:hover { box-shadow: var(--rl-shadow-lg); }
+
+/* Focus states */
+.focus\:rl-ring:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+.focus\:rl-ring-2:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+/* Active states */
+.active\:rl-bg-primary-700:active { background-color: var(--rl-primary-700); }
+.active\:rl-scale-95:active { transform: scale(0.95); }
+
+/* ===================================
+   ANIMATION UTILITIES
+   =================================== */
+
+/* Transitions */
+.rl-transition-all { transition: all var(--rl-transition-base); }
+.rl-transition-colors { transition: color var(--rl-transition-base), background-color var(--rl-transition-base), border-color var(--rl-transition-base); }
+.rl-transition-opacity { transition: opacity var(--rl-transition-base); }
+.rl-transition-shadow { transition: box-shadow var(--rl-transition-base); }
+.rl-transition-transform { transition: transform var(--rl-transition-base); }
+
+/* Transforms */
+.rl-scale-95 { transform: scale(0.95); }
+.rl-scale-100 { transform: scale(1); }
+.rl-scale-105 { transform: scale(1.05); }
+.rl-rotate-0 { transform: rotate(0deg); }
+.rl-rotate-90 { transform: rotate(90deg); }
+.rl-rotate-180 { transform: rotate(180deg); }
+.rl-rotate-270 { transform: rotate(270deg); }
+
+/* ===================================
+   RESPONSIVE UTILITIES
+   =================================== */
+
+/* Mobile first responsive utilities */
+@media (min-width: 640px) {
+  .sm\:rl-text-sm { font-size: var(--rl-text-sm); }
+  .sm\:rl-text-base { font-size: var(--rl-text-base); }
+  .sm\:rl-text-lg { font-size: var(--rl-text-lg); }
+  .sm\:rl-text-xl { font-size: var(--rl-text-xl); }
+  .sm\:rl-text-2xl { font-size: var(--rl-text-2xl); }
+  
+  .sm\:rl-p-4 { padding: var(--rl-space-4); }
+  .sm\:rl-p-6 { padding: var(--rl-space-6); }
+  .sm\:rl-p-8 { padding: var(--rl-space-8); }
+  
+  .sm\:rl-m-4 { margin: var(--rl-space-4); }
+  .sm\:rl-m-6 { margin: var(--rl-space-6); }
+  .sm\:rl-m-8 { margin: var(--rl-space-8); }
+}
+
+@media (min-width: 768px) {
+  .md\:rl-text-sm { font-size: var(--rl-text-sm); }
+  .md\:rl-text-base { font-size: var(--rl-text-base); }
+  .md\:rl-text-lg { font-size: var(--rl-text-lg); }
+  .md\:rl-text-xl { font-size: var(--rl-text-xl); }
+  .md\:rl-text-2xl { font-size: var(--rl-text-2xl); }
+  .md\:rl-text-3xl { font-size: var(--rl-text-3xl); }
+  
+  .md\:rl-p-4 { padding: var(--rl-space-4); }
+  .md\:rl-p-6 { padding: var(--rl-space-6); }
+  .md\:rl-p-8 { padding: var(--rl-space-8); }
+  .md\:rl-p-12 { padding: var(--rl-space-12); }
+  
+  .md\:rl-m-4 { margin: var(--rl-space-4); }
+  .md\:rl-m-6 { margin: var(--rl-space-6); }
+  .md\:rl-m-8 { margin: var(--rl-space-8); }
+  .md\:rl-m-12 { margin: var(--rl-space-12); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:rl-text-sm { font-size: var(--rl-text-sm); }
+  .lg\:rl-text-base { font-size: var(--rl-text-base); }
+  .lg\:rl-text-lg { font-size: var(--rl-text-lg); }
+  .lg\:rl-text-xl { font-size: var(--rl-text-xl); }
+  .lg\:rl-text-2xl { font-size: var(--rl-text-2xl); }
+  .lg\:rl-text-3xl { font-size: var(--rl-text-3xl); }
+  .lg\:rl-text-4xl { font-size: var(--rl-text-4xl); }
+  
+  .lg\:rl-p-4 { padding: var(--rl-space-4); }
+  .lg\:rl-p-6 { padding: var(--rl-space-6); }
+  .lg\:rl-p-8 { padding: var(--rl-space-8); }
+  .lg\:rl-p-12 { padding: var(--rl-space-12); }
+  .lg\:rl-p-16 { padding: var(--rl-space-16); }
+  
+  .lg\:rl-m-4 { margin: var(--rl-space-4); }
+  .lg\:rl-m-6 { margin: var(--rl-space-6); }
+  .lg\:rl-m-8 { margin: var(--rl-space-8); }
+  .lg\:rl-m-12 { margin: var(--rl-space-12); }
+  .lg\:rl-m-16 { margin: var(--rl-space-16); }
+}
+
+@media (min-width: 1280px) {
+  .xl\:rl-text-sm { font-size: var(--rl-text-sm); }
+  .xl\:rl-text-base { font-size: var(--rl-text-base); }
+  .xl\:rl-text-lg { font-size: var(--rl-text-lg); }
+  .xl\:rl-text-xl { font-size: var(--rl-text-xl); }
+  .xl\:rl-text-2xl { font-size: var(--rl-text-2xl); }
+  .xl\:rl-text-3xl { font-size: var(--rl-text-3xl); }
+  .xl\:rl-text-4xl { font-size: var(--rl-text-4xl); }
+  .xl\:rl-text-5xl { font-size: var(--rl-text-5xl); }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+  .rl-print-hidden { display: none !important; }
+  .rl-print-visible { display: block !important; }
+  
+  /* Ensure good contrast for printing */
+  .rl-text-neutral-600 { color: #000 !important; }
+  .rl-text-neutral-500 { color: #333 !important; }
+  
+  /* Remove shadows and backgrounds for cleaner print */
+  .rl-shadow-sm, .rl-shadow, .rl-shadow-md, .rl-shadow-lg, .rl-shadow-xl { box-shadow: none !important; }
+  .rl-bg-neutral-50, .rl-bg-neutral-100 { background-color: transparent !important; }
+}
+
+/* ===================================
+   ACCESSIBILITY ENHANCEMENTS
+   =================================== */
+
+/* Screen reader only text */
+.rl-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .rl-border-neutral-200 { border-color: #000; }
+  .rl-text-neutral-600 { color: #000; }
+  .rl-text-neutral-500 { color: #000; }
+}
+
+/* ===================================
+   DARK MODE SUPPORT (Future Enhancement)
+   =================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* This can be expanded when dark mode is implemented */
+  .rl-dark-mode {
+    --rl-neutral-50: #0f172a;
+    --rl-neutral-100: #1e293b;
+    --rl-neutral-200: #334155;
+    --rl-neutral-300: #475569;
+    --rl-neutral-400: #64748b;
+    --rl-neutral-500: #94a3b8;
+    --rl-neutral-600: #cbd5e1;
+    --rl-neutral-700: #e2e8f0;
+    --rl-neutral-800: #f1f5f9;
+    --rl-neutral-900: #f8fafc;
+  }
+}
