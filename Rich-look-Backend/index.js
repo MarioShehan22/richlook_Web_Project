@@ -15,6 +15,7 @@ const userRoutes = require('./routes/authRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');
+const chatRoutes = require("./routes/chatRoutes");
 
 // Initialize Express app
 const app = express();
@@ -74,6 +75,7 @@ app.use('/api/cart', cartRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/admin/metrics', adminMetricsRoutes);
+app.use("/api/chat", chatRoutes);
 
 // Health check route (optional)
 app.get('/health', (req, res) => {

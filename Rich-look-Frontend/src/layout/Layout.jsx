@@ -1,8 +1,8 @@
 import React from "react";
-import EnhancedNavbar from "../components/EnhancedNavbar.jsx";
 import Footer from "../components/Footer.jsx";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar.jsx";
+import ChatWidget from "../components/ChatWidget.jsx";
 
 const Layout = () => {
     return (
@@ -11,6 +11,7 @@ const Layout = () => {
             <main>
                 <Outlet />
             </main>
+            <ChatWidget />
             <Footer />
         </>
     );

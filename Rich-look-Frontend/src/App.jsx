@@ -19,6 +19,7 @@ import AboutUs from "./pages/AboutUs.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import UsersTable from "./pages/UsersTable.jsx";
 import GiftVouchers from "./pages/GiftVouchers.jsx";
+import OrderHistory from "./pages/OrderHistory.jsx";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Route path="product/:slug" element={<ProductDetails />} />
                     <Route path="cart" element={<CartPage />} />
                     <Route path="wishlist" element={<Wishlist />} />
+                    <Route path="my-orders" element={<OrderHistory />} />
                     <Route path="checkout" element={<Checkout />} />
                     <Route path="about" element={<AboutUs />} />
                     <Route path="privacy" element={<PrivacyPolicy />} />

@@ -1,0 +1,141 @@
+/* Floating button */
+.rl-chat-fab {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: #18a558; /* green */
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Chat window */
+.rl-chat-window {
+    position: fixed;
+    right: 22px;
+    bottom: 90px;
+    width: 340px;
+    max-width: calc(100vw - 44px);
+    height: 490px;
+    max-height: calc(100vh - 140px);
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 9999;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Header */
+.rl-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 12px;
+    background: #0b1b3a; /* dark navy like your footer */
+    color: #fff;
+}
+
+.rl-chat-title {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.rl-chat-subtitle {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.rl-chat-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.rl-chat-link {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.rl-chat-close {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Body */
+.rl-chat-body {
+    padding: 12px;
+    height: calc(100% - 5rem - 5rem);
+    overflow-y: auto;
+    background: #f7f8fa;
+}
+
+.rl-chat-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.rl-chat-row.me {
+    justify-content: flex-end;
+}
+
+.rl-chat-bubble {
+    max-width: 80%;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.35;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.rl-chat-row.me .rl-chat-bubble {
+    background: #18a558;
+    color: #fff;
+    border: none;
+}
+
+/* Footer */
+.rl-chat-footer {
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    height: 5rem;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.rl-chat-input {
+    flex: 1;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 10px;
+    padding: 10px 10px;
+    outline: none;
+    font-size: 13px;
+}
+
+.rl-chat-send {
+    border: none;
+    background: #18a558;
+    color: #fff;
+    padding: 0 14px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.rl-chat-send:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
